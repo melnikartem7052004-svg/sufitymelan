@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sufity Melan - Sufity Napinane Warszawa</title>
 
 <style>
@@ -15,183 +14,291 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#111;
-color:white;
+background:#f7f7f7;
+color:#222;
+}
+
+header{
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+}
+
+.logo{
+height:70px;
+}
+
+.menu a{
+text-decoration:none;
+color:#222;
+margin-left:20px;
+font-weight:bold;
 }
 
 .hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(to bottom,#000,#1a1a1a);
+padding:80px 20px;
+background:linear-gradient(to right,#ffffff,#eef5ff);
+}
+
+.hero-content{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:15px;
+font-size:52px;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-color:#ccc;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
 padding:15px 30px;
-background:#007bff;
+background:#0066ff;
 color:white;
 text-decoration:none;
 border-radius:10px;
 font-weight:bold;
+margin-right:10px;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .section{
-padding:50px 20px;
+padding:80px 20px;
+}
+
+.container{
 max-width:1200px;
 margin:auto;
 }
 
-.section h2{
+h2{
 text-align:center;
-margin-bottom:30px;
-font-size:32px;
+font-size:40px;
+margin-bottom:50px;
 }
 
-.calc{
-background:#1d1d1d;
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
 padding:30px;
-border-radius:15px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 text-align:center;
 }
 
-.calc input{
-padding:12px;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
 width:100%;
-max-width:300px;
-margin:10px;
-border:none;
-border-radius:8px;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
 }
 
-.calc button{
-padding:12px 25px;
-background:#28a745;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-.result{
-margin-top:15px;
-font-size:24px;
-font-weight:bold;
+.gallery img:hover{
+transform:scale(1.03);
 }
 
 .contact{
-text-align:center;
+background:white;
+border-radius:20px;
+padding:40px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.contact a{
-color:#4da6ff;
-display:block;
-margin:10px;
+.contact p{
 font-size:20px;
-text-decoration:none;
+margin-bottom:15px;
 }
 
 footer{
+background:#111;
+color:white;
 text-align:center;
-padding:30px;
-background:#000;
-margin-top:50px;
+padding:25px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.menu{
+display:none;
+}
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-<h1>SUFITY MELAN</h1>
-<p>Nowoczesne sufity napinane w Warszawie i okolicach</p>
+<header>
+<nav>
 
-<a class="btn" href="tel:+48734625102">
-📞 Zadzwoń teraz
-</a>
-</section>
+<img src="logo.png" class="logo">
 
-<section class="section">
-<h2>Dlaczego my?</h2>
-
-<p>✔ Sufity napinane</p>
-<p>✔ Linie świetlne LED</p>
-<p>✔ Tory magnetyczne</p>
-<p>✔ Darmowa wycena</p>
-</section>
-
-<section class="section">
-<h2>Kalkulator ceny</h2>
-
-<div class="calc">
-<input type="number" id="m2" placeholder="Podaj ilość m²">
-
-<br>
-
-<button onclick="oblicz()">
-Oblicz
-</button>
-
-<div class="result" id="wynik"></div>
+<div class="menu">
+<a href="#onas">O nas</a>
+<a href="#oferta">Oferta</a>
+<a href="#realizacje">Realizacje</a>
+<a href="#kontakt">Kontakt</a>
 </div>
+
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div>
+<h1>Nowoczesne sufity napinane w Warszawie</h1>
+
+<p>
+Profesjonalny montaż sufitów napinanych.
+Cena od <b>120 zł/m²</b>.
+Bezpłatny pomiar i wycena.
+</p>
+
+<a href="tel:+48734625102" class="btn">📞 Zadzwoń</a>
+
+<a href="https://wa.me/48734625102" class="btn">WhatsApp</a>
+
+</div>
+
+<div>
+<img src="1.jpg">
+</div>
+
+</div>
+
 </section>
 
-<section class="section contact">
+<section id="oferta" class="section">
+
+<div class="container">
+
+<h2>Dlaczego My?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>✓ Gwarancja</h3>
+<p>Najwyższa jakość wykonania.</p>
+</div>
+
+<div class="card">
+<h3>✓ Szybki Montaż</h3>
+<p>Terminowa realizacja.</p>
+</div>
+
+<div class="card">
+<h3>✓ Estetyka</h3>
+<p>Nowoczesny wygląd wnętrza.</p>
+</div>
+
+<div class="card">
+<h3>✓ Doświadczenie</h3>
+<p>Setki wykonanych realizacji.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="realizacje" class="section">
+
+<div class="container">
+
+<h2>Nasze Realizacje</h2>
+
+<div class="gallery">
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="kontakt" class="section">
+
+<div class="container">
+
 <h2>Kontakt</h2>
 
-<a href="tel:+48734625102">
-📞 +48 734 625 102
-</a>
+<div class="contact">
 
-<a href="https://www.instagram.com/sufity.melan">
-Instagram
-</a>
+<p>📞 +48 734 625 102</p>
 
-<a href="https://www.facebook.com/share/1Jt8QyXUd6">
-Facebook
-</a>
+<p>✉️ melnik.artem7.05.2004@gmail.com</p>
 
-<a href="mailto:melnik.artem7.05.2004@gmail.com">
-✉ melnik.artem7.05.2004@gmail.com
-</a>
+<p>📍 Warszawa i okolice</p>
+
+<p>Cena od 120 zł/m²</p>
+
+<a href="tel:+48734625102" class="btn">Zadzwoń Teraz</a>
+
+</div>
+
+</div>
+
 </section>
 
 <footer>
 Sufity Melan © 2026
 </footer>
 
-<script>
-function oblicz(){
-let m2 = document.getElementById('m2').value;
-let cena = m2 * 100;
-
-document.getElementById('wynik').innerHTML =
-"Szacunkowa cena: " + cena + " zł";
-}
-</script>
-<section style="padding:40px 20px;text-align:center;">
-<h2>Nasze realizacje</h2>
-
-<img src="IMG_1811.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1812.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1728.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1527.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1492.png" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1485.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_1481.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-<img src="IMG_0310.jpeg" style="width:100%;max-width:700px;margin:15px auto;display:block;border-radius:15px;">
-
-</section>
 </body>
 </html>
