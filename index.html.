@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sufity Melan | Nowoczesne Sufity Napinane</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+}
+
+header{
+background:white;
+padding:20px;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#0066ff;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#ffffff,#eaf2ff);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.price{
+font-size:34px;
+font-weight:bold;
+color:#0066ff;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+}
+
+.btn-call{
+background:#0066ff;
+color:white;
+}
+
+.btn-wa{
+background:#25D366;
+color:white;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.calc{
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:600px;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.calc input{
+width:100%;
+padding:15px;
+margin:15px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.calc button{
+width:100%;
+padding:15px;
+background:#0066ff;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+font-size:28px;
+font-weight:bold;
+text-align:center;
+color:#0066ff;
+}
+
+.contact{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:700px;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact p{
+margin:10px 0;
+font-size:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:34px;
+}
+.section-title{
+font-size:30px;
+}
+}
+</style>
+
+<script>
+function liczCena(){
+let m2=document.getElementById("m2").value;
+let cena=m2*120;
+
+document.getElementById("wynik").innerHTML=
+"Szacunkowa cena: "+cena+" zł";
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<div class="logo">SUFITY MELAN</div>
+</div>
+</header>
+
+<section class="hero">
+<h1>Nowoczesne Sufity Napinane</h1>
+<p>Profesjonalny montaż na terenie woj. mazowieckiego</p>
+<div class="price">Od 120 zł/m²</div>
+
+<a class="btn btn-call" href="tel:+48734625102">
+📞 Zadzwoń
+</a>
+
+<a class="btn btn-wa" href="https://wa.me/48734625102">
+WhatsApp
+</a>
+</section>
+
+<section class="section">
+<h2 class="section-title">Dlaczego My?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>⚡ Szybki montaż</h3>
+<p>Krótki czas realizacji.</p>
+</div>
+
+<div class="card">
+<h3>✨ Nowoczesny design</h3>
+<p>Oświetlenie LED i premium wykończenie.</p>
+</div>
+
+<div class="card">
+<h3>🛡 Gwarancja</h3>
+<p>Wysoka jakość materiałów.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Doświadczenie</h3>
+<p>Setki wykonanych realizacji.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Nasze Realizacje</h2>
+
+<div class="gallery">
+
+<img src="IMG_1811.jpeg">
+<img src="IMG_1812.jpeg">
+<img src="IMG_1728.jpeg">
+<img src="IMG_1527.jpeg">
+<img src="IMG_1492.png">
+<img src="IMG_1485.jpeg">
+<img src="IMG_1481.jpeg">
+<img src="IMG_0310.jpeg">
+
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Kalkulator Ceny</h2>
+
+<div class="calc">
+
+<input
+type="number"
+id="m2"
+placeholder="Podaj ilość m²">
+
+<button onclick="liczCena()">
+Oblicz
+</button>
+
+<div id="wynik" class="result"></div>
+
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Kontakt</h2>
+
+<div class="contact">
+
+<p><strong>Telefon:</strong><br>
++48 734 625 102</p>
+
+<p><strong>Email:</strong><br>
+melnik.artem7.05.2004@gmail.com</p>
+
+<p><strong>Obszar działania:</strong><br>
+Województwo Mazowieckie</p>
+
+<a class="btn btn-wa" href="https://wa.me/48734625102">
+Napisz na WhatsApp
+</a>
+
+</div>
+</section>
+
+<footer>
+Sufity Melan © 2026
+</footer>
+
+</body>
+</html>
