@@ -6,12 +6,15 @@
 
 <title>Sufity Melan</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -19,58 +22,61 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f8ff;
+background:#ffffff;
 color:#111;
+overflow-x:hidden;
 }
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:12px 20px;
-background:rgba(255,255,255,.92);
-backdrop-filter:blur(10px);
-z-index:999;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.logo{
-height:55px;
+:root{
+--blue:#2563eb;
+--dark:#0f172a;
+--light:#f8fafc;
 }
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("IMG_1812.jpeg");
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url('IMG_1812.jpeg');
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
-padding:20px;
 }
 
 .hero-content{
-max-width:650px;
+max-width:700px;
+padding:30px;
 color:white;
 }
 
 .hero h1{
-font-size:58px;
-font-weight:900;
+font-size:64px;
 line-height:1.05;
+font-weight:800;
 margin-bottom:20px;
 }
 
-.hero span{
-color:#2f7dff;
+.hero p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:30px;
+max-width:650px;
 }
 
-.subtitle{
-font-size:22px;
-line-height:1.6;
+.badges{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-bottom:35px;
+}
+
+.badge{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:12px 18px;
+border-radius:50px;
+font-weight:600;
 }
 
 .buttons{
@@ -82,153 +88,64 @@ flex-wrap:wrap;
 .btn{
 padding:18px 28px;
 border-radius:14px;
-font-size:18px;
-font-weight:700;
 text-decoration:none;
+font-weight:700;
 transition:.3s;
 }
 
-.call{
-background:#2f7dff;
+.btn-primary{
+background:var(--blue);
 color:white;
 }
 
-.quote{
+.btn-secondary{
 background:white;
-color:#111;
+color:black;
+}
+
+.stats{
+padding:60px 20px;
+background:white;
+}
+
+.stats-wrap{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.stat{
+background:#fff;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.stat-number{
+font-size:42px;
+font-weight:800;
+color:var(--blue);
+}
+
+.stat-text{
+margin-top:10px;
+font-weight:600;
 }
 
 .section{
-padding:80px 20px;
+padding:90px 20px;
 max-width:1200px;
 margin:auto;
 }
 
-.section h2{
+.section-title{
 font-size:42px;
-margin-bottom:40px;
+font-weight:800;
 text-align:center;
-color:#111;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-font-size:20px;
-font-weight:600;
-}
-
-.card span{
-display:block;
-font-size:45px;
-margin-bottom:15px;
-}
-  .calc{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-max-width:700px;
-margin:auto;
-}
-
-.calc input,
-.calc select{
-width:100%;
-padding:18px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:18px;
-}
-
-.calc button{
-width:100%;
-padding:18px;
-background:#2f7dff;
-color:white;
-border:none;
-border-radius:12px;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.result{
-margin-top:20px;
-font-size:32px;
-font-weight:bold;
-text-align:center;
-color:#2f7dff;
-}
-
-.gallery{
-display:flex;
-overflow-x:auto;
-gap:15px;
-padding-bottom:10px;
-}
-
-.gallery img{
-width:300px;
-height:420px;
-object-fit:cover;
-border-radius:20px;
-flex-shrink:0;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.form{
-max-width:700px;
-margin:auto;
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.form input{
-width:100%;
-padding:18px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:18px;
-}
-
-.form button{
-width:100%;
-padding:18px;
-background:#2f7dff;
-color:white;
-border:none;
-border-radius:12px;
-font-size:20px;
-font-weight:bold;
-}
-
-footer{
-padding:50px 20px;
-text-align:center;
-background:#111;
-color:white;
-}
-
-.socials a{
-display:inline-block;
-margin:10px;
-color:white;
-font-size:20px;
-text-decoration:none;
+margin-bottom:50px;
 }
 
 @media(max-width:768px){
@@ -237,52 +154,230 @@ text-decoration:none;
 font-size:42px;
 }
 
-.subtitle{
+.hero p{
 font-size:18px;
 }
 
-.logo{
-height:45px;
+.stats-wrap{
+grid-template-columns:1fr;
 }
 
-.section h2{
-font-size:34px;
+.section-title{
+font-size:32px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
-
-<header>
-<img src="IMG_1808.png" class="logo">
-</header>
 
 <section class="hero">
 
 <div class="hero-content">
 
 <h1>
-Nowoczesne<br>
-Sufity Napinane<br>
-<span>Premium</span>
+Sufity Napinane Premium
 </h1>
 
-<p class="subtitle">
+<p>
 Profesjonalny montaż sufitów napinanych,
-linii LED i torów magnetycznych.
-Bezpłatna wycena w 24h.
+linii LED i torów magnetycznych
+na terenie województwa mazowieckiego.
 </p>
 
+<div class="badges">
+
+<div class="badge">
+✓ Bezpłatny pomiar
+</div>
+
+<div class="badge">
+✓ 15 lat gwarancji
+</div>
+
+<div class="badge">
+✓ Wycena w 24h
+</div>
+
+</div>
+
 <div class="buttons">
-<a class="btn call" href="tel:+48734625102">
+
+<a href="tel:+48734625102" class="btn btn-primary">
 📞 Zadzwoń teraz
 </a>
 
-<a class="btn quote" href="#kontakt">
+<a href="#formularz" class="btn btn-secondary">
 📋 Bezpłatna wycena
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stats-wrap">
+
+<div class="stat">
+<div class="stat-number">500+</div>
+<div class="stat-text">Realizacji</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">15</div>
+<div class="stat-text">Lat gwarancji</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">24h</div>
+<div class="stat-text">Wycena</div>
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2 class="section-title">
+Kalkulator ceny
+</h2>
+
+<div class="calculator">
+
+<select id="typ">
+<option value="120">Sufit matowy (120 zł/m²)</option>
+<option value="120">Sufit połysk (120 zł/m²)</option>
+</select>
+
+<input type="number" id="m2" placeholder="Powierzchnia sufitu (m²)">
+
+<input type="number" id="led" placeholder="Linie LED (mb)">
+
+<input type="number" id="tory" placeholder="Tory magnetyczne (mb)">
+
+<button onclick="oblicz()">
+Oblicz cenę
+</button>
+
+<div id="wynik">
+0 zł
+</div>
+
+<p class="info">
+Cena orientacyjna. Dokładna wycena po bezpłatnym pomiarze.
+</p>
+
+</div>
+
+</section>
+
+<style>
+
+.calculator{
+max-width:800px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.calculator select,
+.calculator input{
+width:100%;
+padding:18px;
+margin-bottom:15px;
+border:1px solid #dbe3ef;
+border-radius:14px;
+font-size:17px;
+}
+
+.calculator button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:14px;
+background:#2563eb;
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+#wynik{
+font-size:42px;
+font-weight:800;
+text-align:center;
+margin-top:25px;
+color:#2563eb;
+}
+
+.info{
+text-align:center;
+margin-top:10px;
+color:#666;
+}
+
+</style>
+
+<script>
+
+function oblicz(){
+
+let cena = Number(document.getElementById("typ").value);
+
+let m2 = Number(document.getElementById("m2").value) || 0;
+
+let led = Number(document.getElementById("led").value) || 0;
+
+let tory = Number(document.getElementById("tory").value) || 0;
+
+let suma =
+(m2 * cena) +
+(led * 220) +
+(tory * 350);
+
+document.getElementById("wynik").innerHTML =
+suma.toLocaleString() + " zł";
+
+}
+г
+</script>
+<section class="section">
+
+<h2 class="section-title">
+Dlaczego my?
+</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="icon">📏</div>
+<h3>Bezpłatny pomiar</h3>
+<p>Przyjeżdżamy i wykonujemy dokładny pomiar bez dodatkowych kosztów.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">🛡️</div>
+<h3>15 lat gwarancji</h3>
+<p>Trwałe materiały i profesjonalny montaż.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">⚡</div>
+<h3>Montaż w 1 dzień</h3>
+<p>Większość realizacji wykonujemy nawet w jeden dzień.</p>
+</div>
+
+<div class="why-card">
+<div class="icon">📍</div>
+<h3>Mazowieckie</h3>
+<p>Obsługujemy całe województwo mazowieckie.</p>
 </div>
 
 </div>
@@ -291,36 +386,9 @@ Bezpłatna wycena w 24h.
 
 <section class="section">
 
-<h2>Dlaczego klienci wybierają Sufity Melan?</h2>
-
-<div class="cards">
-
-<div class="card">
-<span>📏</span>
-Bezpłatny pomiar
-</div>
-
-<div class="card">
-<span>🛡️</span>
-Gwarancja jakości
-</div>
-
-<div class="card">
-<span>⚡</span>
-Montaż nawet w 1 dzień
-</div>
-
-<div class="card">
-<span>📍</span>
-Warszawa i okolice
-</div>
-
-</div>
-
-</section>
-<section class="section">
-
-<h2>Nasze realizacje</h2>
+<h2 class="section-title">
+Nasze realizacje
+</h2>
 
 <div class="gallery">
 
@@ -335,38 +403,194 @@ Warszawa i okolice
 
 </section>
 
+<style>
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.why-card h3{
+margin-bottom:10px;
+}
+
+.why-card p{
+color:#666;
+line-height:1.6;
+}
+
+.gallery{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:10px;
+scroll-snap-type:x mandatory;
+}
+
+.gallery img{
+width:340px;
+height:240px;
+object-fit:cover;
+border-radius:20px;
+flex-shrink:0;
+scroll-snap-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.gallery::-webkit-scrollbar{
+height:8px;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:20px;
+}
+
+</style>
 <section class="section">
 
-<h2>Kalkulator ceny</h2>
+<h2 class="section-title">
+Jak wygląda współpraca?
+</h2>
 
-<div class="calc">
+<div class="steps">
 
-<select id="sufit">
-<option value="120">Sufit matowy (120 zł/m²)</option>
-<option value="120">Sufit połysk (120 zł/m²)</option>
-</select>
+<div class="step">
+<div class="step-number">1</div>
+<h3>Kontakt</h3>
+<p>Skontaktuj się z nami telefonicznie lub przez formularz.</p>
+</div>
 
-<input type="number" id="metry" placeholder="Powierzchnia sufitu (m²)">
+<div class="step">
+<div class="step-number">2</div>
+<h3>Pomiar</h3>
+<p>Przyjeżdżamy na bezpłatny pomiar.</p>
+</div>
 
-<input type="number" id="led" placeholder="Linie LED (mb)">
+<div class="step">
+<div class="step-number">3</div>
+<h3>Wycena</h3>
+<p>Przygotowujemy dokładną wycenę realizacji.</p>
+</div>
 
-<input type="number" id="tory" placeholder="Tory magnetyczne (mb)">
+<div class="step">
+<div class="step-number">4</div>
+<h3>Montaż</h3>
+<p>Profesjonalny montaż sufitu, LED i torów.</p>
+</div>
 
-<button onclick="oblicz()">Oblicz cenę</button>
-
-<div class="result" id="wynik">
-0 zł
+<div class="step">
+<div class="step-number">5</div>
+<h3>Gotowy sufit</h3>
+<p>Cieszysz się nowoczesnym wnętrzem.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="kontakt">
+<section class="section">
 
-<h2>Otrzymaj bezpłatną wycenę</h2>
+<h2 class="section-title">
+Opinie klientów
+</h2>
 
-<div class="form">
+<div class="reviews">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Profesjonalna obsługa i szybki montaż. Polecam.</p>
+<strong>Klient z Warszawy</strong>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Świetny efekt końcowy. Wszystko zgodnie z ustaleniami.</p>
+<strong>Klient z Piaseczna</strong>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Bardzo dobry kontakt i wysoka jakość wykonania.</p>
+<strong>Klient z Pruszkowa</strong>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.step-number{
+width:60px;
+height:60px;
+background:#2563eb;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+font-weight:700;
+margin:auto;
+margin-bottom:15px;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+line-height:1.7;
+}
+
+.review strong{
+display:block;
+margin-top:15px;
+}
+
+</style>
+<section class="section" id="formularz">
+
+<h2 class="section-title">
+Otrzymaj bezpłatną wycenę
+</h2>
+
+<div class="contact-form">
 
 <input type="text" placeholder="Imię">
 
@@ -386,11 +610,24 @@ Wyślij zapytanie
 
 <footer>
 
+<div class="footer-content">
+
 <h3>Sufity Melan</h3>
 
-<p>📞 +48 734 625 102</p>
+<p>
+Profesjonalny montaż sufitów napinanych,
+linii LED i torów magnetycznych.
+</p>
 
-<div class="socials">
+<p>
+📞 +48 734 625 102
+</p>
+
+<p>
+📍 Województwo Mazowieckie
+</p>
+
+<div class="footer-links">
 
 <a href="https://www.instagram.com/sufity.melan/" target="_blank">
 Instagram
@@ -402,31 +639,80 @@ Facebook
 
 </div>
 
+</div>
+
 </footer>
 
-<script>
+<style>
 
-function oblicz(){
-
-let cena = Number(document.getElementById("sufit").value);
-
-let m2 = Number(document.getElementById("metry").value) || 0;
-
-let led = Number(document.getElementById("led").value) || 0;
-
-let tory = Number(document.getElementById("tory").value) || 0;
-
-let suma =
-(m2 * cena) +
-(led * 220) +
-(tory * 350);
-
-document.getElementById("wynik").innerHTML =
-suma.toLocaleString() + " zł";
-
+.contact-form{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-</script>
+.contact-form input{
+width:100%;
+padding:18px;
+margin-bottom:15px;
+border:1px solid #dbe3ef;
+border-radius:14px;
+font-size:16px;
+}
+
+.contact-form button{
+width:100%;
+padding:18px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+footer{
+background:#0f172a;
+color:white;
+padding:70px 20px;
+margin-top:50px;
+}
+
+.footer-content{
+max-width:1200px;
+margin:auto;
+text-align:center;
+}
+
+.footer-content h3{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.footer-content p{
+margin-bottom:12px;
+opacity:.9;
+}
+
+.footer-links{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+</style>
 
 </body>
 </html>
