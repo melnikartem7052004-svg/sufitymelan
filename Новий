@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sufity Melan</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url('IMG_1812.jpeg');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:rgba(0,0,0,.6);
+}
+
+.logo{
+height:60px;
+}
+
+.burger{
+font-size:40px;
+}
+
+.hero-content{
+padding:60px 25px;
+max-width:700px;
+}
+
+.hero h1{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.gold{
+color:#d4b06a;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.5;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 25px;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.call{
+background:#d4b06a;
+color:black;
+}
+
+.quote{
+background:black;
+color:white;
+border:1px solid #d4b06a;
+}
+
+.features{
+background:#070707;
+color:white;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:30px;
+text-align:center;
+}
+
+.feature{
+padding:15px;
+}
+
+.feature span{
+font-size:42px;
+display:block;
+margin-bottom:10px;
+}
+
+@media(min-width:768px){
+
+.features{
+grid-template-columns:repeat(4,1fr);
+}
+
+.hero h1{
+font-size:72px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="header">
+<img src="IMG_1492.png" class="logo">
+<div class="burger">☰</div>
+</div>
+
+<div class="hero-content">
+
+<h1>
+Nowoczesne<br>
+Sufity Napinane<br>
+<span class="gold">Premium</span>
+</h1>
+
+<p>
+Profesjonalny montaż sufitów napinanych,
+linii LED i torów magnetycznych.
+Darmowa wycena w 24h.
+</p>
+
+<div class="buttons">
+
+<a href="tel:+48734625102" class="btn call">
+📞 Zadzwoń teraz
+</a>
+
+<a href="#form" class="btn quote">
+📋 Otrzymaj bezpłatną wycenę
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<span>📏</span>
+Darmowy pomiar
+</div>
+
+<div class="feature">
+<span>🛡️</span>
+Gwarancja jakości
+</div>
+
+<div class="feature">
+<span>⏰</span>
+Montaż nawet w 1 dzień
+</div>
+
+<div class="feature">
+<span>🇵🇱</span>
+Warszawa i okolice
+</div>
+
+</section>
+
+</body>
+</html>
