@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sufity Melan</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:white;
+}
+
+header{
+background:#000;
+padding:15px;
+text-align:center;
+}
+
+.logo{
+width:220px;
+max-width:90%;
+}
+
+.hero{
+background:url('IMG_1811.jpeg') center/cover;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+h1{
+font-size:48px;
+margin:0;
+}
+
+.gold{
+color:#d4af37;
+}
+
+.subtitle{
+font-size:20px;
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+margin:10px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call{
+background:#d4af37;
+color:#000;
+}
+
+.quote{
+border:2px solid #d4af37;
+color:#fff;
+}
+
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+.calc{
+background:#111;
+padding:25px;
+border-radius:15px;
+}
+
+input,select{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:15px;
+width:100%;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+}
+
+.result{
+font-size:30px;
+font-weight:bold;
+margin-top:15px;
+color:#d4af37;
+}
+
+footer{
+text-align:center;
+padding:40px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="IMG_1808.png" class="logo">
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Nowoczesne<br>Sufity Napinane <span class="gold">Premium</span></h1>
+
+<p class="subtitle">
+Profesjonalny montaż sufitów napinanych, linii LED i torów magnetycznych.
+</p>
+
+<a class="btn call" href="tel:+48734625102">📞 Zadzwoń teraz</a>
+<a class="btn quote" href="#kontakt">📋 Bezpłatna wycena</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Dlaczego my?</h2>
+
+<div class="cards">
+<div class="card">✅ Darmowy pomiar</div>
+<div class="card">✅ Gwarancja jakości</div>
+<div class="card">✅ Montaż nawet w 1 dzień</div>
+<div class="card">✅ Warszawa i okolice</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Kalkulator ceny</h2>
+
+<div class="calc">
+
+<select id="typ">
+<option value="120">Matowy</option>
+<option value="140">Połysk</option>
+<option value="170">Linie LED</option>
+<option value="200">Tory magnetyczne</option>
+</select>
+
+<input type="number" id="m2" placeholder="Podaj ilość m²">
+
+<button onclick="oblicz()">Oblicz</button>
+
+<div class="result" id="wynik">0 zł</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Nasze realizacje</h2>
+
+<div class="gallery">
+<img src="IMG_1481.jpeg">
+<img src="IMG_1485.jpeg">
+<img src="IMG_1527.jpeg">
+<img src="IMG_1728.jpeg">
+<img src="IMG_1811.jpeg">
+<img src="IMG_1812.jpeg">
+</div>
+</section>
+
+<section class="section" id="kontakt">
+<h2>Otrzymaj bezpłatną wycenę</h2>
+
+<input placeholder="Imię">
+<input placeholder="Telefon">
+<input placeholder="Miasto">
+<input placeholder="Ilość m²">
+
+<button>Wyślij</button>
+</section>
+
+<footer>
+<p>📞 +48 734 625 102</p>
+<p>Instagram: @sufity.melan</p>
+<p>Facebook: Sufity Melan</p>
+</footer>
+
+<script>
+function oblicz(){
+let cena=document.getElementById('typ').value;
+let m2=document.getElementById('m2').value;
+
+if(!m2){
+document.getElementById('wynik').innerHTML='0 zł';
+return;
+}
+
+document.getElementById('wynik').innerHTML=(cena*m2)+' zł';
+}
+</script>
+
+</body>
+</html>
