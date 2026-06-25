@@ -287,6 +287,29 @@ border-radius:12px;
 margin-bottom:15px;
 font-size:16px;
 }
+    .slider{
+    width:100%;
+    height:10px;
+    -webkit-appearance:none;
+appearance:none;
+    border-radius:50px;
+    background:linear-gradient(
+        90deg,
+        #7b2ff7,
+        #5b4bff,
+        #00c6ff
+    );
+}
+
+-webkit-appearance:none;
+appearance:none;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#fff;
+    border:4px solid #5b4bff;
+    box-shadow:0 0 20px rgba(91,75,255,.7);
+}
 
 .calculator button{
 width:100%;
@@ -459,7 +482,21 @@ Kalkulator wyceny online
 
 <p>Oblicz orientacyjny koszt sufitu napinanego</p>
 
-<input type="number" id="area" placeholder="Powierzchnia sufitu (m²)">
+<div class="slider-box">
+    <div class="slider-value">
+        <span id="areaValue">20</span> m²
+    </div>
+
+    <input
+        type="range"
+        min="5"
+        max="200"
+        value="20"
+        id="area"
+        class="slider"
+        oninput="document.getElementById('areaValue').innerText=this.value"
+    >
+</div>
 
 <select id="type">
     <option value="120">Sufit Matowy</option>
