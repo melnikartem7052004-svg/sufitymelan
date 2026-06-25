@@ -513,6 +513,17 @@ Wyślij zgłoszenie
 <p>📍 Województwo Mazowieckie</p>
 
 </footer>
+<script>
+function calculatePrice() {
+    let area = parseFloat(document.getElementById("area").value) || 0;
+    let lights = parseInt(document.getElementById("lights").value) || 0;
+    let type = parseInt(document.getElementById("type").value);
 
+    let total = (area * type) + (lights * 50);
+
+    document.getElementById("result").innerHTML =
+    "Orientacyjna cena: " + total + " zł";
+}
+</script>
 </body>
 </html>
