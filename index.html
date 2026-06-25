@@ -79,10 +79,30 @@ color:white;
     background-position: center;
     background-repeat: no-repeat;
 }
-.hero p{
-font-size:20px;
-margin-bottom:35px;
-opacity:.95;
+    .hero p{
+    font-size:20px;
+    margin-bottom:35px;
+    color:#f3f1ec;
+    font-weight:300;
+    line-height:1.7;
+    letter-spacing:.4px;
+
+    opacity:0;
+    transform:translateY(40px);
+    animation:heroText 1s ease forwards;
+    animation-delay:.8s;
+}
+
+@keyframes heroText{
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .buttons{
@@ -90,6 +110,22 @@ display:flex;
 gap:15px;
 justify-content:center;
 flex-wrap:wrap;
+
+opacity:0;
+transform:translateY(40px);
+animation:heroButtons 1s ease forwards;
+animation-delay:1.4s;
+}
+
+@keyframes heroButtons{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .btn{
