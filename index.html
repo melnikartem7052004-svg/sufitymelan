@@ -449,6 +449,11 @@ Nasze realizacje
 <h2 class="section-title">
 Kalkulator wyceny online
 </h2>
+    <p style="text-align:center;color:#666;margin-bottom:25px;">
+✓ Wycena w 30 sekund<br>
+✓ Bezpłatny pomiar<br>
+✓ Gwarancja do 10 lat
+</p>
 
 <div class="calculator">
 
@@ -457,10 +462,11 @@ Kalkulator wyceny online
 <input type="number" id="area" placeholder="Powierzchnia sufitu (m²)">
 
 <select id="type">
-    <option value="220">Sufit z liniami LED</option>
-    <option value="320">Tory magnetyczne</option>
-    <option value="280">Sufit z fotodrukiem</option>
-<option value="550">Sufit podświetlany</option>
+    <option value="120">Sufit Matowy</option>
+    <option value="120">Sufit Satynowy</option>
+    <option value="120">Sufit Połysk</option>
+    <option value="280">Sufit z nadrukiem</option>
+    <option value="550">Sufit podświetlany</option>
 </select>
 
 <input type="number" id="meters" placeholder="Długość oświetlenia (mb)">
@@ -510,28 +516,30 @@ Wyślij zgłoszenie
 
 <p>📞 +48 734 625 102</p>
 
-<p>📧 melnik.artem7.05.2004@gmail.com</p>
-
 <p>📍 Województwo Mazowieckie</p>
 
 </footer>
 <script>
 function calculatePrice() {
+
     let area = parseFloat(document.getElementById("area").value) || 0;
     let meters = parseFloat(document.getElementById("meters").value) || 0;
     let chandeliers = parseInt(document.getElementById("chandeliers").value) || 0;
     let type = parseInt(document.getElementById("type").value) || 0;
 
-    let total;
-
-if(type == 280 || type == 550){
-    total = (area * type) + (chandeliers * 80);
-} else {
-    total = (area * 120) + (meters * type) + (chandeliers * 80);
-}
+    let total =
+        (area * type) +
+        (meters * 220) +
+        (chandeliers * 70);
 
     document.getElementById("result").innerHTML =
-        "Orientacyjna cena: <strong>" + total + " zł</strong>";
+        "Cena orientacyjna:<br><strong>" +
+        total.toLocaleString() +
+        " zł</strong><br><br>" +
+        "✓ Darmowy pomiar<br>" +
+        "✓ Gwarancja do 10 lat<br>" +
+        "✓ Realizacja od 3 dni";
+
 }
 </script>
 </body>
