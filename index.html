@@ -82,18 +82,18 @@ background-repeat: no-repeat;
     .hero p{
     font-size:20px;
     margin-bottom:35px;
-    opacity:.95;
+    opacity:0;
+    animation:fadeText .8s ease forwards;
+    animation-delay:.7s;
 }
 
-@keyframes heroText{
-    0%{
+@keyframes fadeText{
+    from{
         opacity:0;
-        transform:translateY(40px);
     }
 
-    100%{
+    to{
         opacity:1;
-        transform:translateY(0);
     }
 }
 
@@ -320,9 +320,9 @@ font-size:34px;
     text-shadow:0 3px 12px rgba(0,0,0,.45);
 
     opacity:0;
-    transform:translateY(40px);
-    animation:heroText 1s ease forwards;
-    animation-delay:.8s;
+transform:translateY(15px) scale(.98);
+animation:heroText .9s cubic-bezier(.22,1,.36,1) forwards;
+animation-delay:.7s;
 }
 
 .gold{
