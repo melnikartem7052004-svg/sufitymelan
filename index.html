@@ -256,7 +256,56 @@ font-size:34px;
 }
 
 }
+.section-title{
+font-size:34px;
+}
 
+/* ТУТ ВСТАВЛЯЄШ КОД КАЛЬКУЛЯТОРА */
+
+.calculator{
+background:linear-gradient(135deg,#7c3aed,#2563eb);
+padding:35px;
+border-radius:25px;
+text-align:center;
+color:white;
+max-width:650px;
+margin:auto;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.calculator p{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.calculator input,
+.calculator select{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+margin-bottom:15px;
+font-size:16px;
+}
+
+.calculator button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:white;
+color:#2563eb;
+font-size:18px;
+font-weight:700;
+}
+
+#result{
+margin-top:20px;
+font-size:26px;
+font-weight:700;
+}
+
+</style>
 </style>
 </head>
 
@@ -396,7 +445,34 @@ Nasze realizacje
     <p>Geometryczne oświetlenie LED nadające wnętrzu wyjątkowy i nowoczesny charakter.</p>
 </div>
     </div>
+<section class="calculator-section">
 
+<h2 class="section-title">
+Kalkulator wyceny online
+</h2>
+
+<div class="calculator">
+
+<p>Oblicz orientacyjny koszt sufitu napinanego</p>
+
+<input type="number" id="area" placeholder="Powierzchnia (m²)">
+
+<input type="number" id="lights" placeholder="Liczba punktów świetlnych">
+
+<select id="type">
+<option value="220">Sufit z liniami LED</option>
+<option value="320">Tory magnetyczne</option>
+</select>
+
+<button onclick="calculatePrice()">
+Oblicz cenę
+</button>
+
+<div id="result"></div>
+
+</div>
+
+</section>
 
 </div>
 
