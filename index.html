@@ -410,7 +410,44 @@ margin-top:20px;
 font-size:26px;
 font-weight:700;
 }
+.scroll-down{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:30px;
+}
 
+.scroll-down span{
+    width:18px;
+    height:18px;
+    border-right:3px solid #D4AF37;
+    border-bottom:3px solid #D4AF37;
+    transform:rotate(45deg);
+    margin:-6px;
+    animation:scrollArrow 1.5s infinite;
+}
+
+.scroll-down span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.scroll-down span:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes scrollArrow{
+    0%{
+        opacity:0;
+        transform:rotate(45deg) translate(-8px,-8px);
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform:rotate(45deg) translate(8px,8px);
+    }
+}
 </style>
 </style>
 </head>
@@ -440,7 +477,11 @@ Darmowa wycena
     <a href="tel:+48734625102" class="btn btn-gold">
 📞 Zadzwoń teraz
 </a>
-
+<div class="scroll-down">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 </div>
 
 </div>
