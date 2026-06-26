@@ -195,13 +195,13 @@ transition:all .8s cubic-bezier(.22,1,.36,1);
 margin:0;
 font-size:20px;
 }
-
 .gallery{
-    display:flex;
-    flex-direction:column;
-    gap:45px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
     margin-top:50px;
 }
+
 
 .project-card{
     position:relative;
@@ -216,19 +216,42 @@ font-size:20px;
     transform:translateY(-8px);
     box-shadow:0 35px 80px rgba(0,0,0,.28);
 }
-
 .project-card img{
     width:100%;
-    height:520px;
+    height:420px;
     object-fit:cover;
     display:block;
-    transition:1s;
+    transition:.6s ease;
 }
 
 .project-card:hover img{
     transform:scale(1.08);
 }
+.project-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,.65), transparent 60%);
+}
 
+.project-card::before{
+    content:"Zobacz realizację";
+    position:absolute;
+    left:24px;
+    bottom:24px;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    z-index:2;
+    opacity:0;
+    transform:translateY(12px);
+    transition:.35s;
+}
+
+.project-card:hover::before{
+    opacity:1;
+    transform:translateY(0);
+}
 .project-info{
     position:absolute;
     left:0;
