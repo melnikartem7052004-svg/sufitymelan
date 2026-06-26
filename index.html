@@ -197,55 +197,103 @@ font-size:20px;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:32px;
-    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:45px;
+    margin-top:50px;
 }
 
-.gallery img{
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+    background:#000;
+    transition:.45s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 35px 80px rgba(0,0,0,.28);
+}
+
+.project-card img{
     width:100%;
-    height:260px;
+    height:520px;
     object-fit:cover;
     display:block;
-    transition:.5s;
-}
-.project-info{
-    padding:24px;
-    background:#fff;
-    position:relative;
+    transition:1s;
 }
 
-.project-info::before{
-    content:"";
+.project-card:hover img{
+    transform:scale(1.08);
+}
+
+.project-info{
     position:absolute;
-    top:0;
-    left:24px;
-    width:70px;
-    height:4px;
-    border-radius:10px;
-    background:linear-gradient(90deg,#2d6cff,#66b3ff);
+    left:0;
+    right:0;
+    bottom:0;
+    padding:55px;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.55) 45%,
+    rgba(0,0,0,0) 100%);
+    color:white;
 }
 
 .project-info h3{
-    margin:18px 0 12px;
-    font-size:26px;
-    font-weight:700;
-    color:#111;
+    font-size:38px;
+    margin-bottom:15px;
+    font-weight:800;
 }
 
 .project-info p{
-    margin:0;
-    font-size:16px;
+    font-size:19px;
     line-height:1.7;
-    color:#666;
+    color:#ececec;
+    max-width:650px;
 }
 
-.room{
-    display:none;
+.project-btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 34px;
+    border-radius:40px;
+    background:#1976ff;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:.35s;
 }
-.project-card:hover img{
-    transform:scale(1.05);
+
+.project-btn:hover{
+    background:#0f5ddd;
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.project-card img{
+height:340px;
+}
+
+.project-info{
+padding:28px;
+}
+
+.project-info h3{
+font-size:28px;
+}
+
+.project-info p{
+font-size:16px;
+}
+
+.project-btn{
+width:100%;
+text-align:center;
+}
 }
 
 .contact{
